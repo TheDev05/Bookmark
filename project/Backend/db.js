@@ -5,7 +5,7 @@ const mongoURI =
 const mongoDB = async () => {
   try {
     await mongoose.connect(mongoURI);
-    console.log("Connected!");
+    console.log("Connected");
 
     let fetched_data = mongoose.connection.db.collection("food_items");
     let data1 = await fetched_data.find({}).toArray();
