@@ -8,7 +8,7 @@ const UserSchema = new Schema({
   },
   location: {
     type: String,
-    required: true,
+    default: "Location",
   },
   email: {
     type: String,
@@ -16,7 +16,7 @@ const UserSchema = new Schema({
   },
   password: {
     type: String,
-    default: "Location",
+    required: true,
   },
   data: {
     type: Date,
