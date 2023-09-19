@@ -41,7 +41,6 @@ router.post(
         name: req.body.name,
         password: secPassword,
         email: req.body.email,
-        location: "Alpha Nagar",
       });
 
       res.json({ success: true });

@@ -16,7 +16,7 @@ const UserSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
+    default: "Location",
   },
   data: {
     type: Date,
