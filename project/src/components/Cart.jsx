@@ -29,7 +29,7 @@ export default function Cart() {
   const userCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     // console.log("userEmial:", userEmail);
-    let response = await fetch("http://localhost:5000/api/orderData", {
+    let response = await fetch("https://bookmark-api-nine.vercel.app/api/orderData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

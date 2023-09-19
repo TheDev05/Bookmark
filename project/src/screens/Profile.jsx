@@ -7,7 +7,7 @@ export default function MyOrders() {
   const loadData = async (e) => {
     // e.preventDefault();
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("http://localhost:5000/api/profile", {
+    let response = await fetch("https://bookmark-api-nine.vercel.app/api/profile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
