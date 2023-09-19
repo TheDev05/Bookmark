@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import style from "./Home.module.css";
 import { ImBooks } from "react-icons/im";
 
-import img1 from "../assests/title_img.jpg"
+import img1 from "../assests/title_img.jpg";
 
 export default function () {
   const [foodCat, setFoodCat] = useState([]);
@@ -15,24 +15,29 @@ export default function () {
   const [genre, setGenre] = useState("All Genres");
 
   const loadData = async () => {
-    let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      "https://bookmark-api-nine.vercel.app/api/foodData",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     response = await response.json();
 
     setFoodCat(response[1]);
     setFoodItem(response[0]);
 
-    console.log(response[0]);
+    // console.log(response[0]);
   };
 
   useEffect(() => {
     loadData();
   }, []);
+
+  if (foodItem.length === 0) return <div>Loading</div>;
 
   return (
     <div className={style.body}>
@@ -51,10 +56,7 @@ export default function () {
           </div>
         </div>
         <div className={style.right}>
-          <img
-            src={img1}
-            alt=""
-          />
+          <img src={img1} alt="" />
         </div>
       </div>
 
@@ -123,7 +125,7 @@ export default function () {
                   <Card foodName={e} />
                 </div>
               ) : (
-                <></>
+                <>We're out of stock for this Genre.</>
               );
             })
           ) : (
