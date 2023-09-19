@@ -1,0 +1,93 @@
+.nav {
+  background-color: #f3f2ec;
+  height: 10%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 0.5px solid rgb(0, 0, 0, 0.1);
+
+  overflow: hidden;
+
+}
+
+.demo {
+  --accent-color: #c5a992;
+  --secondary-color: #c5a992;
+  --dark-color: #2f2f2f;
+  --light-color: #f3f2ec;
+  --body-text-color: #757575;
+  --light-text-color: #afafaf;
+  --dark-text-color: #2f2f2f;
+
+  --body-font: "Raleway", sans-serif;
+  --heading-font: "Prata", Georgia, serif;
+  --secondary-font: "Playfair Display", Georgia, serif;
+}
+
+.logo {
+  position: relative;
+  /* background-color: rgb(101, 82, 82); */
+  width: 15%;
+  color: #896d56;
+  font-weight: 550;
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  left: 10%;
+}
+
+.auth {
+  position: relative;
+  /* background-color: aqua; */
+  height: 100%;
+  width: 30%;
+  padding: 20px;
+  left: 63%;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.home,
+.signup,
+.signin,
+.profile,
+.cart,
+.logout {
+  margin: 10px;
+  color: #896d56;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.cart {
+  font-size: 30px;
+  position: relative;
+  top: -10px;
+  color: #684b34;
+  z-index: 10;
+}
+
+.count {
+  background-color: rgba(232, 61, 61, 0.8);
+  position: absolute;
+  height: 60%;
+  width: 90%;
+  color: rgb(0, 0, 0);
+  left: 15px;
+  top: -5px;
+  border-radius: 100%;
+  border: 0.5px solid white;
+}
+
+.count > p {
+  font-size: 5px;
+  position: relative;
+  left: 32%;
+  top: 6%;
+  color: white;
+}

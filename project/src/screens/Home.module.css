@@ -1,0 +1,177 @@
+.body {
+  background-color: #f3f2ec;
+  height: auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow: hidden;
+}
+
+.demo {
+  --accent-color: #c5a992;
+  --secondary-color: #c5a992;
+  --dark-color: #2f2f2f;
+  --light-color: #f3f2ec;
+  --body-text-color: #757575;
+  --light-text-color: #afafaf;
+  --dark-text-color: #2f2f2f;
+
+  --body-font: "Raleway", sans-serif;
+  --heading-font: "Prata", Georgia, serif;
+  --secondary-font: "Playfair Display", Georgia, serif;
+}
+
+.featured {
+  background-color: #f3f2ec;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  background-color: #f3f2ec;
+  width: 60%;
+  height: 100%;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.right {
+  background-color: #f3f2ec;
+  width: 40%;
+  height: 100%;
+}
+
+.right img {
+  position: relative;
+  top: 6%;
+}
+
+.para {
+  padding: 10%;
+  position: relative;
+  left: 20%;
+  top: 10%;
+}
+
+.para p {
+  /* background-color: red; */
+  position: relative;
+  height: 10%;
+  font-size: 5px;
+  color: rgb(0, 0, 0, 0.5);
+  width: 60%;
+}
+
+.para h1 {
+  font-size: 70px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.para button {
+  outline: none;
+  border: none;
+  padding: 2%;
+  position: relative;
+  width: 30%;
+  background-color: rgba(232, 61, 61, 0.666);
+  /* border: 0.5px solid rgb(0, 0, 0, 0.2); */
+  color: rgb(100%, 100%, 100%, 0.9);
+  top: 20px;
+}
+
+.featured button:hover {
+  background-color: rgba(232, 61, 61, 0.8);
+}
+
+.partion {
+  position: relative;
+  background-color: rgba(204, 172, 148, 0.1);
+  width: 100%;
+  top: 20%;
+  height: 215px;
+  display: flex;
+  flex-direction: row;
+
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.icons {
+  font-size: 150px;
+  position: relative;
+  top: -70%;
+}
+
+.holder {
+  padding: 5%;
+  position: relative;
+  left: -2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.line1 {
+  background-color: rgb(0, 0, 0, 0.2);
+  width: 500px;
+  height: 0.5px;
+  position: relative;
+  top: 60%;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+.book_section {
+  position: relative;
+  top: 0px;
+  color: rgb(0, 0, 0, 0.7);
+  /* background-color: #47e309; */
+  /* height: 100vh; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book_section h2 {
+  position: relative;
+  top: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.genre {
+  position: relative;
+  top: 20px;
+  color: rgb(0, 0, 0, 0.9);
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+}
+
+.genre > button {
+  margin: 10px;
+}
+
+.genre button {
+  border: none;
+  outline: none;
+  background-color: #f3f2ec;
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.books {
+  /* background-color: #c9af1d; */
+  width: 90%;
+  left: 1%;
+  position: relative;
+  top: 40px;
+  height: 600%;
+  flex-wrap: wrap;
+
+  display: flex;
+  flex-direction: row;
+}

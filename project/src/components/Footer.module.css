@@ -1,0 +1,36 @@
+.body {
+  background-color: #f3f2ec;
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+span {
+  color: rgb(224, 171, 26);
+}
+
+.context {
+  display: flex;
+  flex-direction: row;
+  /* background-color: aqua; */
+  height: 40px;
+  width: 80%;
+  border-top: 1px solid black;
+  padding: 10px;
+
+  position: relative;
+  top: 40%;
+  color: rgb(0, 0, 0, 0.5);
+  left: 10%;
+  justify-content: space-between;
+}
+
+.social2 {
+  font-size: 30px;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.social1 {
+  font-size: 26px;
+  color: rgb(0, 0, 0, 0.6);
+}
