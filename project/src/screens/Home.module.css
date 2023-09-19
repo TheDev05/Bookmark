@@ -47,7 +47,7 @@
 
 .right img {
   position: relative;
-  top: 6%; 
+  top: 6%;
   height: 75%;
   width: 65%;
 }
@@ -176,4 +176,28 @@
 
   display: flex;
   flex-direction: row;
+}
+
+.loader {
+  background-color: #f3f2ec;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  color: #2f2f2f;
+}
+
+.loader span{
+  position: relative;
+  top: 35%;
+  font-size: 20px;
+  color: rgb(112, 87, 14);
 }

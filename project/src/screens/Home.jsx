@@ -37,7 +37,7 @@ export default function () {
     loadData();
   }, []);
 
-  if (foodItem.length === 0) return <div>Loading</div>;
+  if (foodItem.length === 0) return <div className={style.loader}><span>Stacking Books, Hold Tight!</span></div>;
 
   return (
     <div className={style.body}>
@@ -125,7 +125,7 @@ export default function () {
                   <Card foodName={e} />
                 </div>
               ) : (
-                <>We're out of stock for this Genre.</>
+                <></>
               );
             })
           ) : (
