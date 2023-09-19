@@ -7,7 +7,7 @@ const mongoDB = require("./db");
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["https://bookmark-frontend-three.vercel.app/"],
+    origin: ["https://bookmark-frontend-three.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
