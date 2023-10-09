@@ -1,9 +1,9 @@
-Live application at: [Bookmark](https://bookmark-frontend-three.vercel.app)
+Live application at: [Bookmark](https://bookmark-frontend-three.vercel.app/login)
 
 ## Demo Credentials
 ```
 Email: guest@guest.com
-Password: Guest@123
+Password: guest@123
 ```
 
 After cloning, your project should look like this:
