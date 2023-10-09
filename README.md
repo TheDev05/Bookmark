@@ -1,3 +1,11 @@
+Live application at: [Bookmark](https://bookmark-frontend-three.vercel.app)
+
+## Demo Credentials
+```
+Email: guest@guest.com
+Password: Guest@123
+```
+
 After cloning, your project should look like this:
 
 ```
@@ -57,4 +65,4 @@ The backend will run on port **8000**. You will also see any lint errors in the 
 
 <br>
 
-Try the live application at: [Bookmark](https://bookmark-frontend-three.vercel.app)
+
