@@ -36,9 +36,16 @@ To run the app in the development mode. Execute the command
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The frontend will look like this:
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The webpage for frontend will look like this:
 <br>
-<img src="https://github.com/TheDev05/Bookmark/assets/73834703/8ffe8e99-ca9e-4543-98be-6a9f4c853276" >
+<br>
+![image](https://github.com/TheDev05/Bookmark/assets/73834703/2ae5716c-c40b-447c-a55f-2bb9b3a1438c)
+![image](https://github.com/TheDev05/Bookmark/assets/73834703/e1149d4c-d9a9-4c87-802e-bd120ac38c8a)
+![image](https://github.com/TheDev05/Bookmark/assets/73834703/ed42845d-6e10-48dc-86dd-148f0eafeb14)
+![image](https://github.com/TheDev05/Bookmark/assets/73834703/59c10008-4a70-4fe9-800e-1d2b5291faa5)
+![image](https://github.com/TheDev05/Bookmark/assets/73834703/6c7dac47-fba1-4a7a-9cf1-2fe5c6567340)
+
+
 
 <br>
 
