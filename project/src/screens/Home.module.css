@@ -188,6 +188,12 @@
   .left .para button {
     width: 60%;
   }
+
+  .book_section {
+    /* position: absolute; */
+    top: -300px;
+    background-color: red;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -198,7 +204,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .left {
     justify-content: center;
     align-items: center;
@@ -213,5 +219,15 @@
   .left .para p {
     width: 80%;
     background-color: transparent;
+  }
+
+  .book_section {
+    /* position: absolute; */
+    top: -400px;
+    background-color: red;
+  }
+
+  .title h2{
+    font-size: 30px;
   }
 }
