@@ -1,3 +1,4 @@
+
 import { React, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -8,8 +9,8 @@ import img1 from "../assests/books.png"
 
 export default function Login() {
   const [creds, setCreds] = useState({
-    email: "",
-    password: "",
+    email: "guest@guest.com",
+    password: "guest@123",
   });
 
   let navigate = useNavigate();
@@ -62,7 +63,6 @@ export default function Login() {
             value={creds.email}
             onChange={onChange}
             placeholder="Email"
-            id=""
           />
           <input
             type="password"

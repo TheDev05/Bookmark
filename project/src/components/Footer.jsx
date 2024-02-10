@@ -14,7 +14,7 @@ export default function Footer() {
             <span>TheDev05</span>
           </a>
         </p>
-        <p>
+        <p className={style.socials}>
           <a target="_blank" href="https://www.linkedin.com/in/thedev05/"><BsLinkedin className={style.social1} /></a> <a target="_blank" href="https://twitter.com/TheDev05"><FaTwitterSquare className={style.social2} /> </a>
         </p>
       </div>

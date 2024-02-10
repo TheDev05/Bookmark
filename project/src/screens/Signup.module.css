@@ -1,92 +1,107 @@
 .body {
-    background-color: #f3f2ec;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  
+  background-color: #f3f2ec;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  background-color: #f3f2ec;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.right {
+  background-color: #f3f2ec;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  /* background-color: red; */
+}
+
+.head span {
+  color: rgb(255, 209, 5);
+  text-decoration: underline;
+}
+
+.card {
+  background-color: #0000007a;
+  position: relative;
+  height: 48%;
+  width: 70%;
+  top: 15%;
+  left: 15%;
+  color: rgb(255, 255, 255);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card input,
+.card button {
+  margin: 2px;
+  padding: 8px;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  top: 0%;
+
+  border: none;
+  outline: none;
+}
+
+.card input {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.614);
+}
+
+.card button {
+  position: relative;
+  top: 2%;
+  padding: 8px;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+.head {
+  /* background-color: blueviolet; */
+  padding: 10px;
+  position: relative;
+  left: 3%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.head h4 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.login_cover {
+  width: 75%;
+  height: 73%;
+  position: relative;
+  left: 12%;
+  top: 5%;
+}
+
+@media screen and (max-width: 900px) {
   .left {
-    background-color: #f3f2ec;
-    height: 100%;
-    width: 50%;
-    position: relative;
+    display: none;
   }
-  
-  .right {
-    background-color: #f3f2ec;
-    height: 100%;
-    width: 50%;
-    position: relative;
+
+  .body {
+    justify-content: center;
+    align-items: center;
   }
-  
-  .head span {
-    color: rgb(255, 209, 5);
-    text-decoration: underline;
+
+  .right{
+    width: 100%;
   }
-  
-  .card {
-    background-color: #0000007a;
-    position: relative;
-    height: 48%;
-    width: 70%;
-    top: 15%;
-    left: 20%;
-    color: rgb(255, 255, 255);
-  
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card input,
-  .card button {
-    margin: 2px;
-    padding: 8px;
-    width: 90%;
-    position: relative;
-    left: 5%;
-    top: 0%;
-  
-    border: none;
-    outline: none;
-  }
-  
-  .card input {
-    background-color: #fff;
-    color: rgba(0, 0, 0, 0.614);
-  }
-  
-  .card button {
-    position: relative;
-    top: 2%;
-    padding: 8px;
-    height: 15%;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .card a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .head {
-    /* background-color: blueviolet; */
-    padding: 10px;
-    position: relative;
-    left: 3%;
-    font-family: "Times New Roman", Times, serif;
-  }
-  
-  .head h4 {
-    font-size: 50px;
-    font-weight: 600;
-  }
-  
-  .login_cover {
-    width: 75%;
-    height: 73%;
-    position: relative;
-    left: 12%;
-    top: 5%;
-  }
-  
+}

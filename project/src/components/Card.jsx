@@ -6,6 +6,9 @@ import toast, { Toaster } from "react-hot-toast";
 import style from "./Card.module.css";
 import { MdShoppingCart } from "react-icons/md";
 
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+
 const divStyle = {
   // background: "red",
   // transition: "ease in",
@@ -47,7 +50,8 @@ export default function (props) {
   return (
     <div className={style.card}>
       <div className={style.top}>
-        <img src={props.foodName.img} alt="" />
+        <img className={style.cardImage} src={props.foodName.img} alt="" />
+
         <button className={style.button} onClick={addtocart}>
           <MdShoppingCart className={style.cardIcon} />
         </button>

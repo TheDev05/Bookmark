@@ -5,7 +5,7 @@
   position: relative;
 }
 
-span {
+.context span {
   color: rgb(224, 171, 26);
 }
 
@@ -33,4 +33,16 @@ span {
 .social1 {
   font-size: 26px;
   color: rgb(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 650px) {
+  .socials {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .context{
+    display: flex;
+    flex-direction: column;
+  }
 }

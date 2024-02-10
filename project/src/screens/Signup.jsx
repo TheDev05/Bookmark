@@ -8,9 +8,9 @@ import img1 from "../assests/books.png";
 
 export default function Signup() {
   const [creds, setCreds] = useState({
-    name: "",
-    email: "",
-    password: "",
+    name: "Guest",
+    email: "guest@guest.com",
+    password: "guest@123",
     location: "",
   });
 
@@ -22,18 +22,21 @@ export default function Signup() {
 
   const submit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://bookmark-api-nine.vercel.app/api/createuser", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: creds.name,
-        email: creds.email,
-        password: creds.password,
-        location: creds.location,
-      }),
-    });
+    const response = await fetch(
+      "https://bookmark-api-nine.vercel.app/api/createuser",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: creds.name,
+          email: creds.email,
+          password: creds.password,
+          location: creds.location,
+        }),
+      }
+    );
 
     const json = await response.json();
     console.log(json);
@@ -68,11 +71,9 @@ export default function Signup() {
             value={creds.name}
             onChange={onChange}
             placeholder="Name"
-            id=""
           />
           <input
             type="text"
-            id=""
             name="email"
             value={creds.email}
             onChange={onChange}

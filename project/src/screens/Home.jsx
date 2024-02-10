@@ -7,6 +7,23 @@ import { ImBooks } from "react-icons/im";
 
 import img1 from "../assests/title_img.jpg";
 
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Unstable_Grid2";
+
+import { useCart, useDispatchCart } from "../components/ContextReducer.js";
+
+import toast, { Toaster } from "react-hot-toast";
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
 export default function () {
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
@@ -15,15 +32,12 @@ export default function () {
   const [genre, setGenre] = useState("All Genres");
 
   const loadData = async () => {
-    let response = await fetch(
-      "https://bookmark-api-nine.vercel.app/api/foodData",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     response = await response.json();
 
@@ -37,7 +51,42 @@ export default function () {
     loadData();
   }, []);
 
-  if (foodItem.length === 0) return <div className={style.loader}><span>Stacking Books, Hold Tight!</span></div>;
+  if (foodItem.length === 0)
+    return (
+      <div className={style.loader}>
+        <span>Stacking Books, Hold Tight!</span>
+      </div>
+    );
+
+  let dispatch = useDispatchCart();
+  let data = useCart();
+
+  const addtocart = async () => {
+    console.log("hello");
+
+    if (!localStorage.getItem("authToken")) {
+      toast.error("Sign in first to Cart your Books");
+      return;
+    }
+
+    if (
+      data.find((e) => {
+        return e.id == "props.foodName._id";
+      }) == undefined
+    ) {
+      await dispatch({
+        type: "ADD",
+        id: "65089245m61apd551435f4e5",
+        name: "Life of The Wild",
+        price: 450,
+        img: "https://github.com/TheDev05/LocalHost/blob/main/Images/atomic-habits-dots-removebg.png",
+      });
+
+      toast.success("Added to cart!");
+    } else toast.error("Book is alredy in cart!");
+
+    // console.log("props",  props);
+  };
 
   return (
     <div className={style.body}>
@@ -52,7 +101,9 @@ export default function () {
               eos numquam unde necessitatibus, ipsa eum, accusantium doloremque
               nisi natus soluta maiores ?
             </p>
-            <button>Featured</button>
+            <button onClick={addtocart}>
+              <span>Add to Cart</span>
+            </button>
           </div>
         </div>
         <div className={style.right}>
@@ -63,8 +114,8 @@ export default function () {
       <div className={style.partion}>
         <div className={style.holder}>
           <div className={style.line1}></div>
-          <ImBooks className={style.icons} />{" "}
-          <div className={style.line1}></div>
+          {/* <ImBooks className={style.icons} />{" "}
+          <div className={style.line1}></div> */}
         </div>
       </div>
 

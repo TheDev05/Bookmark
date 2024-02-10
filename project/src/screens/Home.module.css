@@ -66,6 +66,8 @@
   font-size: 5px;
   color: rgb(0, 0, 0, 0.5);
   width: 60%;
+
+  /* background-color: red; */
 }
 
 .para h1 {
@@ -89,45 +91,10 @@
   background-color: rgba(232, 61, 61, 0.8);
 }
 
-.partion {
-  position: relative;
-  background-color: rgba(204, 172, 148, 0.1);
-  width: 100%;
-  top: 20%;
-  height: 215px;
-  display: flex;
-  flex-direction: row;
-
-  color: rgb(0, 0, 0, 0.6);
-}
-
-.icons {
-  font-size: 150px;
-  position: relative;
-  top: -70%;
-}
-
-.holder {
-  padding: 5%;
-  position: relative;
-  left: -2%;
-  display: flex;
-  flex-direction: row;
-}
-
-.line1 {
-  background-color: rgb(0, 0, 0, 0.2);
-  width: 500px;
-  height: 0.5px;
-  position: relative;
-  top: 60%;
-  margin-right: 70px;
-  margin-left: 70px;
-}
-
 .book_section {
   position: relative;
-  top: 0px;
+  /* border-top: 0.5px solid rgb(0, 0, 0, 0.2); */
+  top: -100px;
   color: rgb(0, 0, 0, 0.7);
   /* background-color: #47e309; */
   /* height: 100vh; */
@@ -152,6 +119,8 @@
   /* background-color: aqua; */
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .genre > button {
@@ -171,11 +140,11 @@
   left: 1%;
   position: relative;
   top: 40px;
-  height: 600%;
   flex-wrap: wrap;
-
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .loader {
@@ -195,9 +164,54 @@
   color: #2f2f2f;
 }
 
-.loader span{
+.loader span {
   position: relative;
   top: 35%;
   font-size: 20px;
   color: rgb(112, 87, 14);
+}
+
+@media screen and (max-width: 900px) {
+  .right {
+    display: none;
+    background-color: lightgreen;
+  }
+
+  .left {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 5%;
+  }
+
+  .left .para button {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .featured img {
+    width: 60%;
+    height: 60%;
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .left {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 5%;
+  }
+
+  .left .para h1 {
+    font-size: 40px;
+  }
+
+  .left .para p {
+    width: 80%;
+    background-color: transparent;
+  }
 }
