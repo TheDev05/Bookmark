@@ -191,7 +191,7 @@
 
   .book_section {
     /* position: absolute; */
-    top: -380px;
+    /* top: -380px; */
     border-top: 0.5px solid grey;
 
     /* background-color: red; */
@@ -204,7 +204,7 @@
 
   .featured{
     position: relative;
-    top: -80px;
+    /* top: -80px; */
 
     display: flex;
     flex-direction: row;
@@ -230,7 +230,7 @@
 
   .featured{
     position: relative;
-    top: -80px;
+    /* top: -80px; */
 
     display: flex;
     flex-direction: row;
@@ -248,7 +248,7 @@
 
   .book_section {
     /* position: absolute; */
-    top: -400px;
+    /* top: -400px; */
     border-top: 0.5px solid grey;
     /* background-color: red; */
   }
@@ -258,6 +258,6 @@
   }
 
   .genre{
-    font-size: 10px;
+    font-size: 5px;
   }
 }
