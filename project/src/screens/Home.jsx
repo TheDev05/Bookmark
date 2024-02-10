@@ -1,28 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-
 import style from "./Home.module.css";
-import { ImBooks } from "react-icons/im";
-
 import img1 from "../assests/title_img.jpg";
-
 import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Unstable_Grid2";
-
 import { useCart, useDispatchCart } from "../components/ContextReducer.js";
-
 import toast, { Toaster } from "react-hot-toast";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+//   ...theme.typography.body2,
+//   padding: theme.spacing(1),
+//   textAlign: "center",
+//   color: theme.palette.text.secondary,
+// }));
 
 export default function () {
   const [foodCat, setFoodCat] = useState([]);
@@ -30,6 +22,7 @@ export default function () {
   // const [search, setSearch] = useState("");
 
   const [genre, setGenre] = useState("All Genres");
+  const [isLoading, setIsLoading] = useState(true);
 
   const loadData = async () => {
     let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
@@ -48,7 +41,10 @@ export default function () {
   };
 
   useEffect(() => {
-    loadData();
+    setIsLoading(true);
+    loadData().then(() => {
+      setIsLoading(false);
+    });
   }, []);
 
   // if (foodItem.length == 0)
@@ -88,9 +84,9 @@ export default function () {
     // console.log("props",  props);
   };
 
-return (
+  return (
     <>
-      {foodItem.length > 0 ? (
+      {isLoading == false ? (
         <div className={style.body}>
           <div className={style.featured}>
             <div className={style.left}>
