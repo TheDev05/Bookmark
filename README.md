@@ -1,11 +1,28 @@
 Live application at: [Bookmark](https://bookmark-frontend-three.vercel.app/login)
 
-## Demo Credentials
+<br>
+
+## About Project
+
+* `Frontend: ` This project is made using MERN stack, so **ReactJS** is used as frontend. React has various advantages such as component-based architecture, faster rendering,stable code structure, SEO-enabled, handy developer tools, easy to Learn and easy to Use.
+
+* `Backend: ` For the backend keeping in mind MERN stack, **NodeJS/ExpressJS** is used in backend which is a perfect combination with react because node is asynchronous, and dependent on event occurrences, compatibility with different devices,fast data streaming with no buffering, speedy code development and based on JavaScript.
+
+* `Database:` For the database purpose to store user data, **MongoDB** is used because of full cloud-based developer data platform, flexible document schemas,change-friendly design, powerful querying and analytics, cost-effective i.e. free of cost and full technical support and documentation.
+
+* `Responsive: ` The Web application is fully resposnive for all kind of dispaly size.
+  ![image](https://github.com/TheDev05/Bookmark/assets/73834703/cf46cee1-2c0a-4863-ba7c-658e00ce4a98)
+
+
+<br>
+
+## Guest Credentials
 ```
 Email: guest@guest.com
 Password: guest@123
 ```
 
+## Steps after Clone
 After cloning, your project should look like this:
 
 ```
@@ -58,18 +75,6 @@ npm start
 
 The backend will run on port **8000**. You will also see any lint errors in the console.
 
-<br>
 
-## About Project
-
-* `Frontend: ` This project is made using MERN stack, so **React** is used as frontend. React has various advantages such as component-based architecture, faster rendering,stable code structure, SEO-enabled, handy developer tools, easy to Learn and easy to Use.
-
-* `Backend: ` For the backend keeping in mind MERN stack, **NodeJS** is used in backend which is a perfect combination with react because node is asynchronous, and dependent on event occurrences, compatibility with different devices,fast data streaming with no buffering, speedy code development and based on JavaScript.
-
-* `Database:` For the database purpose to store user data, **MongoDB** is used because full cloud-based developer data platform, flexible document schemas,change-friendly design, powerful querying and analytics, cost-effective i.e. free of cost and full technical support and documentation.
-
-* `Cloud: ` To store the images posted by the user, **Cloudinary** is used. Cloudinary is used because is stores and delivers images and videos, image and video manipulation and transformation is possible, automatic image optimization, automatic video transcoding and delivery in various formats, integration with various programming languages and frameworks such as NodeJS.
-
-<br>
 
 
