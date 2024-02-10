@@ -79,7 +79,7 @@ export default function () {
         id: "65089245m61apd551435f4e5",
         name: "Life of The Wild",
         price: 450,
-        img: "https://github.com/TheDev05/LocalHost/blob/main/Images/atomic-habits-dots-removebg.png",
+        img: "https://demo.templatesjungle.com/booksaw/images/main-banner1.jpg",
       });
 
       toast.success("Added to cart!");
