@@ -192,7 +192,7 @@
   .book_section {
     /* position: absolute; */
     top: -300px;
-    background-color: red;
+/*     background-color: red; */
   }
 }
 
@@ -224,7 +224,7 @@
   .book_section {
     /* position: absolute; */
     top: -400px;
-    background-color: red;
+/*     background-color: red; */
   }
 
   .title h2{
