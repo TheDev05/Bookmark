@@ -191,8 +191,24 @@
 
   .book_section {
     /* position: absolute; */
-    top: -300px;
-/*     background-color: red; */
+    top: -380px;
+    border-top: 0.5px solid grey;
+
+    /* background-color: red; */
+  }
+
+
+  .left .para h1 {
+    font-size: 60px;
+  }
+
+  .featured{
+    position: relative;
+    top: -80px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -212,6 +228,15 @@
     left: 5%;
   }
 
+  .featured{
+    position: relative;
+    top: -80px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .left .para h1 {
     font-size: 40px;
   }
@@ -224,10 +249,15 @@
   .book_section {
     /* position: absolute; */
     top: -400px;
-/*     background-color: red; */
+    border-top: 0.5px solid grey;
+    /* background-color: red; */
   }
 
   .title h2{
-    font-size: 30px;
+    font-size: 25px;
+  }
+
+  .genre{
+    font-size: 10px;
   }
 }
