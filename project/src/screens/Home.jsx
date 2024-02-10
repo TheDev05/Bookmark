@@ -51,7 +51,7 @@ export default function () {
     loadData();
   }, []);
 
-  if (foodItem.length === 0)
+  if (foodItem.length == 0)
     return (
       <div className={style.loader}>
         <span>Stacking Books, Hold Tight!</span>
