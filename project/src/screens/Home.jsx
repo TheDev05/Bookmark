@@ -45,7 +45,7 @@ export default function () {
     loadData().then(() => {
       setIsLoading(false);
     });
-  }, []);
+  }, [foodItem]);
 
   // if (foodItem.length == 0)
   //   return (
