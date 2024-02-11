@@ -37,22 +37,13 @@ export default function () {
     setFoodCat(response[1]);
     setFoodItem(response[0]);
 
-    // console.log(response[0]);
+    setIsLoading(false);
   };
 
   useEffect(() => {
     setIsLoading(true);
-    loadData().then(() => {
-      setIsLoading(false);
-    });
-  },[]);
-
-  // if (foodItem.length == 0)
-  //   return (
-  //     <div className={style.loader}>
-  //       <span>Stacking Books, Hold Tight!</span>
-  //     </div>
-  //   );
+    loadData();
+  }, []);
 
   let dispatch = useDispatchCart();
   let data = useCart();
