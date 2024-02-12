@@ -35,7 +35,7 @@ export default function () {
       setIsLoading(true);
       try {
         let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
-          method: "GET",
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
