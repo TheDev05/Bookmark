@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function () {
   const [foodCat, setFoodCat] = useState([]);
-  const [foodItem, setFoodItem] = useState(null);
+  const [foodItem, setFoodItem] = useState([]);
 
   const [genre, setGenre] = useState("All Genres");
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +35,7 @@ export default function () {
       setIsLoading(true);
       try {
         let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
-          method: "POST",
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
@@ -170,7 +170,7 @@ export default function () {
           </div>
 
           <div className={style.books}>
-            {foodItem !== null? (
+            {
               foodItem.map((e) => {
                 return e.CategoryName === genre || genre == "All Genres" ? (
                   <div key={e._id}>
@@ -180,9 +180,7 @@ export default function () {
                   <></>
                 );
               })
-            ) : (
-              <div>Loading...</div>
-            )}
+            }
           </div>
         </div>
         <Footer />
