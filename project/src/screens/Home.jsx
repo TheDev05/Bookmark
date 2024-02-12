@@ -35,6 +35,8 @@ export default function () {
     response = await response.json();
 
     setFoodCat(response[1]);
+    console.log(response[0]);
+
     if (response[0] != null) setFoodItem(response[0]);
     setIsLoading(false);
   };
