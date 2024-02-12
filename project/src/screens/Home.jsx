@@ -77,7 +77,7 @@ export default function () {
 
   return (
     <>
-      {isLoading == false ? (
+      {isLoading === false ? (
         <div className={style.body}>
           <div className={style.featured}>
             <div className={style.left}>
