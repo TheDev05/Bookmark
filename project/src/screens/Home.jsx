@@ -13,27 +13,52 @@ export default function () {
   const [genre, setGenre] = useState("All Genres");
   const [isLoading, setIsLoading] = useState(true);
 
-  const loadData = async () => {
-    let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  // const loadData = async () => {
+  //   let response = await fetch("http://localhost:5000/api/foodData", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
 
-    response = await response.json();
+  //   response = await response.json();
 
-    setFoodCat(response[1]);
-    setFoodItem(response[0]);
+  //   setFoodCat(response[1]);
+  //   setFoodItem(response[0]);
 
-    // console.log(response[0]);
-    if (response[0] != null) setIsLoading(false);
-  };
+  //   // console.log(response[0]);
+  //   if (response[0] != null) setIsLoading(false);
+  // };
 
   useEffect(() => {
-    setIsLoading(true);
-    loadData();
-  }, [isLoading]);
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        response = await response.json();
+
+        setFoodCat(response[1]);
+        setFoodItem(response[0]);
+
+        setIsLoading(false); // Move this line here
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setIsLoading(false); // Make sure to set loading state to false even in case of an error
+      }
+    };
+
+    fetchData();
+  }, []); // empty dependency array, runs only once
 
   let dispatch = useDispatchCart();
   let data = useCart();
