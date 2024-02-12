@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function () {
   const [foodCat, setFoodCat] = useState([]);
-  const [foodItem, setFoodItem] = useState([]);
+  const [foodItem, setFoodItem] = useState(null);
 
   const [genre, setGenre] = useState("All Genres");
   const [isLoading, setIsLoading] = useState(true);
@@ -170,7 +170,7 @@ export default function () {
           </div>
 
           <div className={style.books}>
-            {foodItem != null && foodItem.length != 0 ? (
+            {foodItem !== null? (
               foodItem.map((e) => {
                 return e.CategoryName === genre || genre == "All Genres" ? (
                   <div key={e._id}>
@@ -181,7 +181,7 @@ export default function () {
                 );
               })
             ) : (
-              <div>No data is found</div>
+              <div>Loading...</div>
             )}
           </div>
         </div>
