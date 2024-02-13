@@ -1,6 +1,6 @@
+// mongoDB.js
 const mongoose = require("mongoose");
-const mongoURI =
-  "mongodb+srv://TheDev05:TheDev05@cluster0.pclim9q.mongodb.net/GoFood?retryWrites=true&w=majority";
+const mongoURI = "mongodb+srv://TheDev05:TheDev05@cluster0.pclim9q.mongodb.net/GoFood?retryWrites=true&w=majority";
 
 const mongoDB = async () => {
   try {
@@ -13,15 +13,12 @@ const mongoDB = async () => {
     let foodCategory = mongoose.connection.db.collection("foodCategory");
     let data2 = await foodCategory.find({}).toArray();
 
-    // global vairbale
-
-    global.food_items = data1;
-    global.foodCategory = data2;
-
-    // console.log(global.foodCategory);
+    // Return the data
+    return [data1, data2];
   } catch (error) {
     console.log("err: ", error);
+    throw error; // Throw the error to be caught by the caller
   }
 };
 
-module.exports = mongoDB();
+module.exports = mongoDB;
