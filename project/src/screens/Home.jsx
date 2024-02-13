@@ -13,29 +13,12 @@ export default function () {
   const [genre, setGenre] = useState("All Genres");
   const [isLoading, setIsLoading] = useState(true);
 
-  // const loadData = async () => {
-  //   let response = await fetch("http://localhost:5000/api/foodData", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
-
-  //   response = await response.json();
-
-  //   setFoodCat(response[1]);
-  //   setFoodItem(response[0]);
-
-  //   // console.log(response[0]);
-  //   if (response[0] != null) setIsLoading(false);
-  // };
-
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
-          method: "POST",
+        let response = await fetch("http://localhost:5000/api/foodData", {
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
@@ -49,6 +32,8 @@ export default function () {
 
         setFoodCat(response[1]);
         setFoodItem(response[0]);
+
+        // console.log(foodItem);
 
         setIsLoading(false); // Move this line here
       } catch (error) {
@@ -181,7 +166,9 @@ export default function () {
                 );
               })
             ) : (
-              <div>Loading...</div>
+              <div>
+                Hold Tight, Almost There!
+              </div>
             )}
           </div>
         </div>
