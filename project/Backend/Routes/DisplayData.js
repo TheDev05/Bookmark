@@ -1,12 +1,16 @@
+// foodData.js
 const express = require("express");
 const router = express.Router();
+const mongoDB = require('../db.js');
 
-router.post("/foodData", (req, res) => {
+router.get("/foodData", async (req, res) => {
   try {
-    res.send([global.food_items, global.foodCategory]);
+    // Fetch data from the database
+    const [food_items, foodCategory] = await mongoDB();
+    res.send([food_items, foodCategory]);
   } catch (error) {
     console.error(error.message);
-    res.send("server error");
+    res.status(500).send("Server error");
   }
 });
 
