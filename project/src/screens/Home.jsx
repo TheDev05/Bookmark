@@ -17,7 +17,7 @@ export default function () {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        let response = await fetch("http://localhost:5000/api/foodData", {
+        let response = await fetch("https://bookmark-api-nine.vercel.app/api/foodData", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
